@@ -1,66 +1,10 @@
-INSERT INTO Cargo (descricao)
-VALUES
-	("Professor"),
-    ("Coordenador de Curso"),
-    ("Coordenador de Estágio"),
-    ("Coordenador de Extensão"),
-    ("Coordenador de Pesquisa"),
-    ("Diretor"),
-    ("Vice-Diretor");
-    
-INSERT INTO Cidade (DDD, nome, UnidadeFederativa_idUnidadeFederativa, UnidadeFederativa_Pais_idPais)
-VALUES
-	(71, "Salvador", 5, 1),
-    (61, "Brasília", 7, 1),
-    (67, "Campo Grande", 12, 1),
-    (85, "Fortaleza", 6
-, 1),
-    (21, "Rio de Janeiro", 19, 1);
-
-INSERT INTO Escolaridade (descricao)
-VALUES
-	("Ensino Fundamental Incompleto"),
-    ("Ensino Fundamental Completo"),
-    ("Ensino Médio Incompleto"),
-    ("Ensino Médio Completo"),
-    ("Ensino Superior Incompleto"),
-    ("Ensino Superior Completo");
-
 INSERT INTO Pais (nome)
 VALUES
   ("Brasil"),
   ("China"),
   ("Estados Unidos"),
   ("Argentina"),
-  ("Colômbia"); 
-
-INSERT INTO Sexo (descricao)
-VALUES
-	("Homem Cis"),
-    ("Homem Trans"),
-    ("Mulher Cis"),
-    ("Mulher Trans"),
-    ("Não Binário");
-
-INSERT INTO Telefone (numero, TipoTelefone_idTipoTelefone, Cidade_idCidade)
-VALUES
-	(937187468,1,3),
-	(982827434,3,1),
-	(906185282,2,5),
-	(935874879,3,2),
-	(946329639,2,3);
-
-INSERT INTO TipoPessoa (descricao)
-VALUES
-	("Aluno"),
-	("Servidor"),
-    ("Externo");
-
-INSERT INTO TipoTelefone (descricao)
-VALUES
-	("Celular"),
-    ("Residencial"),
-    ("Comercial");
+  ("Colômbia");     
 
 INSERT INTO UnidadeFederativa (nome, Pais_idPais)
 VALUES
@@ -92,4 +36,59 @@ VALUES
     ("Sergipe", 1),
     ("Tocantins", 1);
 
-SELECT * FROM Cidade;
+INSERT INTO Cidade (DDD, nome, UnidadeFederativa_idUnidadeFederativa, UnidadeFederativa_Pais_idPais)
+VALUES
+	(71, "Salvador", 5, 1),
+    (61, "Brasília", 7, 1),
+    (67, "Campo Grande", 12, 1),
+    (85, "Fortaleza", 6
+, 1),
+    (21, "Rio de Janeiro", 19, 1);
+
+
+INSERT INTO TipoTelefone (descricao)
+VALUES
+	("Celular"),
+    ("Residencial"),
+    ("Comercial");
+
+INSERT INTO Telefone (numero, TipoTelefone_idTipoTelefone, Cidade_idCidade)
+VALUES
+	(937187468,1,3),
+	(982827434,3,1),
+	(906185282,2,5),
+	(935874879,3,2),
+	(946329639,2,3);
+    
+INSERT INTO Sexo (descricao)
+VALUES
+	("Homem Cis"),
+    ("Homem Trans"),
+    ("Mulher Cis"),
+    ("Mulher Trans"),
+    ("Não Binário");
+
+INSERT INTO TipoPessoa (descricao)
+VALUES
+	("Aluno"),
+	("Servidor"),
+    ("Externo");
+
+INSERT INTO Escolaridade (descricao)
+VALUES
+	("Ensino Fundamental Incompleto"),
+    ("Ensino Fundamental Completo"),
+    ("Ensino Médio Incompleto"),
+    ("Ensino Médio Completo"),
+    ("Ensino Superior Incompleto"),
+    ("Ensino Superior Completo");
+
+INSERT INTO Cargo (descricao)
+VALUES
+	("Professor"),
+    ("Coordenador de Curso"),
+    ("Coordenador de Estágio"),
+    ("Coordenador de Extensão"),
+    ("Coordenador de Pesquisa"),
+    ("Diretor"),
+    ("Vice-Diretor");
