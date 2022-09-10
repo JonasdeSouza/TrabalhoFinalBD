@@ -13,7 +13,8 @@ VALUES
 	(71, "Salvador", 5, 1),
     (61, "Brasília", 7, 1),
     (67, "Campo Grande", 12, 1),
-    (85, "Fortaleza", 6, 1),
+    (85, "Fortaleza", 6
+, 1),
     (21, "Rio de Janeiro", 19, 1);
 
 INSERT INTO Escolaridade (descricao)
@@ -41,11 +42,25 @@ VALUES
     ("Mulher Trans"),
     ("Não Binário");
 
+INSERT INTO Telefone (numero, TipoTelefone_idTipoTelefone, Cidade_idCidade)
+VALUES
+	(937187468,1,3),
+	(982827434,3,1),
+	(906185282,2,5),
+	(935874879,3,2),
+	(946329639,2,3);
+
 INSERT INTO TipoPessoa (descricao)
 VALUES
 	("Aluno"),
 	("Servidor"),
     ("Externo");
+
+INSERT INTO TipoTelefone (descricao)
+VALUES
+	("Celular"),
+    ("Residencial"),
+    ("Comercial");
 
 INSERT INTO UnidadeFederativa (nome, Pais_idPais)
 VALUES
@@ -76,3 +91,5 @@ VALUES
     ("São Paulo", 1),
     ("Sergipe", 1),
     ("Tocantins", 1);
+
+SELECT * FROM Cidade;
