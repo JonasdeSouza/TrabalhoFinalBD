@@ -41,8 +41,7 @@ VALUES
 	(71, "Salvador", 5, 1),
     (61, "Brasília", 7, 1),
     (67, "Campo Grande", 12, 1),
-    (85, "Fortaleza", 6
-, 1),
+    (85, "Fortaleza", 6, 1),
     (21, "Rio de Janeiro", 19, 1);
 
 
@@ -92,3 +91,24 @@ VALUES
     ("Coordenador de Pesquisa"),
     ("Diretor"),
     ("Vice-Diretor");
+    
+INSERT INTO Bairro (nome, Cidade_idCidade, Cidade_UnidadeFederativa_idUnidadeFederativa, Cidade_UnidadeFederativa_Pais_idPais)
+VALUES
+	("Cidade Baixa", 1, 5, 1),
+    ("Plano Piloto", 2, 7, 1),
+    ("Cidade Jardim", 3, 12, 1),
+    ("Aldeota", 4, 6, 1),
+    ("Ipanema", 5, 19, 1);
+    
+INSERT INTO TipoEndereco (descricao)
+VALUES
+		("Residencial"),
+        ("Comercial");
+        
+INSERT INTO Endereco (logradouro, numero, CEP, complemento, Bairro_idBairro, Bairro_Cidade_idCidade, Bairro_Cidade_UnidadeFederativa_idUnidadeFederativa, Bairro_Cidade_UnidadeFederativa_Pais_idPais, TipoEndereco_idTipoEndereco)
+VALUES
+	("W1 Norte", 302, "14545-172", "Apartamento", 2, 2, 7, 1, 1),
+    ("W2 Sul", 406, "56874-865", "Casa", 2, 2, 7, 1, 1),
+    ("Lago Sul 01 QI", 11, "37753-725", "Apartamento", 2, 2, 7, 1, 1),
+    ("Lago Norte", 62, "68550-421", "Casa", 2, 2, 7, 1, 1),
+    ("Vila Planalto", 54, "26666-787", "Comercio", 2, 2, 7, 1, 2);
