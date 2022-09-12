@@ -112,3 +112,50 @@ VALUES
     ("Lago Sul 01 QI", 11, "37753-725", "Apartamento", 2, 2, 7, 1, 1),
     ("Lago Norte", 62, "68550-421", "Casa", 2, 2, 7, 1, 1),
     ("Vila Planalto", 54, "26666-787", "Comercio", 2, 2, 7, 1, 2);
+
+INSERT INTO EstadoCivil (descricao)
+VALUES
+    ("Solteiro(a)"),
+    ("Casado(a)"),
+    ("Separado(a)"),
+    ("Divorciado(a)"),
+    ("Viuvo(a)");
+
+INSERT INTO Departamento (nome, sigla)
+VALUES
+    ("Departamento de Ciência da Computação", "CIC"),
+    ("Departamento de Engenharia Elétrica", "ENE"),
+    ("Departamento de Matemática", "MAT"),
+    ("Departamento de Engenharia Civil", "ENC"),
+    ("Departamento de Física", "FIS");
+
+INSERT INTO Curso (nome, Departamento_idDepartamento)
+VALUES
+    ("Ciência da Computação", 1),
+    ("Engenharia Elétrica", 2),
+    ("Matemática", 3),
+    ("Engenharia Civil", 4),
+    ("Física", 5);
+
+INSERT INTO Disciplina (nome, quantidadeCreditos, ementa, Departamento_idDepartamento)
+VALUES
+    ("Bancos de Dados", 4, "Exemplo de Ementa", 1),
+    ("Sistemas Microprocessados", 4, "Exemplo de Ementa", 2),
+    ("Calculo numérico", 4, "Exemplo de Ementa", 3),
+    ("Introdução à engenharia civil", 4, "Exemplo de Ementa", 4),
+    ("Fisica 2", 4, "Exemplo de Ementa", 5);
+
+INSERT INTO MateriasObrigatoriasCurso (Disciplina_idDisciplina, Curso_idCurso)
+VALUES
+    (1,1),
+    (2,2),
+    (3,3),
+    (4,4),
+    (5,5);
+
+INSERT INTO TipoFluxo (descricao)
+VALUES
+    ("Real"),
+    ("Planejado");
+
+INSERT INTO 
