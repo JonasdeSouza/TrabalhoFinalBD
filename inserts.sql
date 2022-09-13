@@ -69,8 +69,8 @@ VALUES
 
 INSERT INTO TipoPessoa (descricao)
 VALUES
-	("Aluno"),
-	("Servidor"),
+	("Aluno(a)"),
+	("Servidor(a)"),
     ("Externo");
 
 INSERT INTO Escolaridade (descricao)
@@ -84,13 +84,14 @@ VALUES
 
 INSERT INTO Cargo (descricao)
 VALUES
-	("Professor"),
-    ("Coordenador de Curso"),
-    ("Coordenador de Estágio"),
-    ("Coordenador de Extensão"),
-    ("Coordenador de Pesquisa"),
-    ("Diretor"),
-    ("Vice-Diretor");
+	("Professor(a)"),
+    ("Coordenador(a) de Curso"),
+    ("Coordenador(a) de Estágio"),
+    ("Coordenador(a) de Extensão"),
+    ("Coordenador(a) de Pesquisa"),
+    ("Diretor(a)"),
+    ("Vice-Diretor(a)"),
+    ("Terceirizado(a)");
     
 INSERT INTO Bairro (nome, Cidade_idCidade, Cidade_UnidadeFederativa_idUnidadeFederativa, Cidade_UnidadeFederativa_Pais_idPais)
 VALUES
@@ -102,8 +103,8 @@ VALUES
     
 INSERT INTO TipoEndereco (descricao)
 VALUES
-		("Residencial"),
-        ("Comercial");
+	("Residencial"),
+    ("Comercial");
         
 INSERT INTO Endereco (logradouro, numero, CEP, complemento, Bairro_idBairro, Bairro_Cidade_idCidade, Bairro_Cidade_UnidadeFederativa_idUnidadeFederativa, Bairro_Cidade_UnidadeFederativa_Pais_idPais, TipoEndereco_idTipoEndereco)
 VALUES
@@ -131,6 +132,7 @@ VALUES
 
 INSERT INTO Curso (nome, Departamento_idDepartamento)
 VALUES
+    ("Engenharia de Computação", 1),
     ("Ciência da Computação", 1),
     ("Engenharia Elétrica", 2),
     ("Matemática", 3),
@@ -158,4 +160,54 @@ VALUES
     ("Real"),
     ("Planejado");
 
-INSERT INTO 
+INSERT INTO Status (descricao)
+VALUES 
+    ("Planejado"),
+    ("Cursado"),
+    ("Cursando");
+
+INSERT INTO TipoSemestre (descricao)
+VALUES
+    ("Normal"),
+    ("Verão");
+
+INSERT INTO Mencao (descricao)
+VALUES 
+    ("SS"),
+    ("MS"),
+    ("MM"),
+    ("MI"),
+    ("II"),
+    ("SR");
+
+INSERT INTO Pessoa (matricula, dataIngresso, email, nome, CPF, identidade, passaporte, TipoPessoa_idTipoPessoa, Sexo_idSexo, Cargo_idCargo, idPessoa_Filiacao, Escolaridade_idEscolaridade, EstadoCivil_idEstadoCivil, nacionalidade, Cidade_idCidade_Naturalidade, Endereco_idEndereco)
+VALUES
+    (NULL, "2018-03-10", "mariasouza@gmail.com", "Maria Souza", "016.103.864-31", "0.321.182", NULL, 3, 3, NULL, NULL, 4, 2, "Brasil", 3, 3),
+    (180076271, "2018-03-10", "pedrosouza@gmail.com", "Pedro Souza", "046.235.012-56", "3.548.248", NULL, 1, 1, NULL, NULL, 4, 1, "Brasil", 2, 3),
+    (096023749, "1996-06-15", "victorhugo@ieee.com", "Victor Hugo", "619.174.690-39", "0.185.519", "CS265436", 2, 1, 1, NULL, 6, 3, "Brasil", 1, 4),
+    (170015462, "2017-02-08", "mariaeduarda@gmail.com", "Maria Eduarda", "967.177.420-20", "2.155.368", NULL, 1, 4, NULL, NULL, 4, 1, "Brasil", 1, 4),
+    (010817912, "2008-09-28", "joaogomes@gmail.com", "Joao Gomes", "804.854.740-69", "0.985.716", NULL, 2, 2, 5, NULL, 3, 4, "Brasil", 1, 1);
+
+UPDATE Pessoa
+SET idPessoa_Filiacao = 1
+WHERE idPessoa = 2;
+
+UPDATE Pessoa
+SET idPessoa_Filiacao = 3
+WHERE idPessoa = 4;
+
+INSERT INTO Fluxo (TipoFluxo_idTipoFluxo, Pessoa_idPessoa, Curso_idCurso)
+VALUES
+    (1, 2, 1),
+    (2, 4, 2),
+    (2, NULL, 1),
+    (2, NULL, 4),
+    (2, NULL, 5);
+
+INSERT INTO Semestre (data, totalCreditos, Mencao_idMencao, Disciplina_idDisciplina, TipoSemestre_idTipoSemestre, Status_idStatus, Fluxo_idFluxo)
+VALUES 
+    ("2022-01-17", 8, 2, 1, 1, 2, 1),
+    ("2022-01-17", 8, 3, 2, 1, 2, 1),
+    ("2022-06-06", 4, NULL, 4, 1, 3, 1),
+    (NULL, 8, NULL, 1, 1, 1, 3),
+    (NULL, 8, NULL, 2, 1, 1, 3);
