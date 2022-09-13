@@ -122,30 +122,42 @@ VALUES
     ("Divorciado(a)"),
     ("Viuvo(a)");
 
-INSERT INTO Departamento (nome, sigla)
-VALUES
-    ("Departamento de Ciência da Computação", "CIC"),
-    ("Departamento de Engenharia Elétrica", "ENE"),
-    ("Departamento de Matemática", "MAT"),
-    ("Departamento de Engenharia Civil", "ENC"),
-    ("Departamento de Física", "FIS");
+-- INSERT INTO Departamento (nome, sigla)
+-- VALUES
+    -- ("Departamento de Ciência da Computação", "CIC"),
+    -- ("Departamento de Engenharia Elétrica", "ENE"),
+    -- ("Departamento de Matemática", "MAT"),
+    -- ("Departamento de Engenharia Civil", "ENC"),
+    -- ("Departamento de Física", "FIS");
+
+INSERT INTO `mydb`.`Departamento` (`idDepartamento`, `nome`, `sigla`) VALUES (1, 'Departamento de Ciência da Computação', 'CIC');
+INSERT INTO `mydb`.`Departamento` (`idDepartamento`, `nome`, `sigla`) VALUES (2, 'Faculdade do Gama', 'FGA');
+INSERT INTO `mydb`.`Departamento` (`idDepartamento`, `nome`, `sigla`) VALUES (3, 'Departamento de Matemática', 'MAT');
+INSERT INTO `mydb`.`Departamento` (`idDepartamento`, `nome`, `sigla`) VALUES (4, 'Instituto de Física', 'IFD');
+INSERT INTO `mydb`.`Departamento` (`idDepartamento`, `nome`, `sigla`) VALUES (5, "Departamento de Engenharia Civil", "ENC");
 
 INSERT INTO Curso (nome, Departamento_idDepartamento)
 VALUES
-    ("Engenharia de Computação", 1),
-    ("Ciência da Computação", 1),
-    ("Engenharia Elétrica", 2),
-    ("Matemática", 3),
-    ("Engenharia Civil", 4),
-    ("Física", 5);
+    ("Engenharia de Software", 2),
+    ("Engenharia Aeroespacial", 2),
+    ("Engenharia Automotiva", 2),
+    ("Engenharia de Energia", 2),
+    ("Engenharia de Redes e Comunicação", 2),
+    ("Engenharia Eletrônica", 2);
 
-INSERT INTO Disciplina (nome, quantidadeCreditos, ementa, Departamento_idDepartamento)
-VALUES
-    ("Bancos de Dados", 4, "Exemplo de Ementa", 1),
-    ("Sistemas Microprocessados", 4, "Exemplo de Ementa", 2),
-    ("Calculo numérico", 4, "Exemplo de Ementa", 3),
-    ("Introdução à engenharia civil", 4, "Exemplo de Ementa", 4),
-    ("Fisica 2", 4, "Exemplo de Ementa", 5);
+INSERT INTO `mydb`.`Disciplina` (`idDisciplina`, `nome`, `quantidadeCreditos`, `ementa`, `Departamento_idDepartamento`) VALUES (1, 'Cálculo 1', 6, 'Funções de uma variável real, limite e continuidade, derivada, integral, aplicações da integral.', 3);
+INSERT INTO `mydb`.`Disciplina` (`idDisciplina`, `nome`, `quantidadeCreditos`, `ementa`, `Departamento_idDepartamento`) VALUES (2, 'Cálculo 2', 6, 'Sequências e séries numéricas séries de potências fórmula de Taylor equações diferenciais ordinárias de 1ª ordem equações diferenciais ordinárias lineares o método da série de potências a transformada de Laplace sistemas lineares de equações diferenciais ordinárias de 1ª ordem.', 3);
+INSERT INTO `mydb`.`Disciplina` (`idDisciplina`, `nome`, `quantidadeCreditos`, `ementa`, `Departamento_idDepartamento`) VALUES (3, 'Introdução à Engenharia', 2, 'A estrutura da Universidade de Brasília. A estrutura do Curso de Engenharia. Técnicas de administração de tempo. Técnicas de estudo. Noções de Engenharia Automotiva. Noções de Engenharia Eletrônica. Noções de Engenharia de Energia. Noções de Engenharia de Software. Noções de Engenharia Aeroespacial', 2);
+INSERT INTO `mydb`.`Disciplina` (`idDisciplina`, `nome`, `quantidadeCreditos`, `ementa`, `Departamento_idDepartamento`) VALUES (4, 'Algoritmos e Programação de Computadores', 6, 'Princípios fundamentais de construção de programas. Construção de algoritmos e sua representação em pseudocódigo e linguagens de alto nível. Noções de abstração. Especificação de variáveis e funções. Testes e depuração. ', 1);
+INSERT INTO `mydb`.`Disciplina` (`idDisciplina`, `nome`, `quantidadeCreditos`, `ementa`, `Departamento_idDepartamento`) VALUES (5, 'Fisica 1', 4, 'Módulos 1: Unidades e grandezas físicas 2: Vetores 3: Movimento retilineo 4: Movimento em duas e três dimensoes 5: Leis de Newton do movimento 6: Aplicação das Leis de Newton 7', 4);
+INSERT INTO `mydb`.`Disciplina` (`idDisciplina`, `nome`, `quantidadeCreditos`, `ementa`, `Departamento_idDepartamento`) VALUES (6, 'Probabilidade e Estatística', 4, 'Conceitos e noções fundamentais. Variáveis aleatórias. Distribuições das Variáveis aleatórias. Intervalo de confiança. Teste de hipóteses. Erros do Tipo I/II. ', 3);
+INSERT INTO `mydb`.`Disciplina` (`idDisciplina`, `nome`, `quantidadeCreditos`, `ementa`, `Departamento_idDepartamento`) VALUES (7, 'Estruturas de Dados', 4, ' Recursividade- Ponteiros e alocação dinâmica de memória- Estruturas lineares. Arrays. Listas. Filas. Pilhas- Introdução à Complexidade computacional e notação Big-O', 1);
+INSERT INTO `mydb`.`Disciplina` (`idDisciplina`, `nome`, `quantidadeCreditos`, `ementa`, `Departamento_idDepartamento`) VALUES (8, 'Mecânica de Vôo', 4, 'Equacionamento do movimento de uma aeronave considerada como corpo rígido: análise dinâmica e cinemática Conceitos fundamentais da dinâmica e controle de atitude de aeronaves', 2);
+INSERT INTO `mydb`.`Disciplina` (`idDisciplina`, `nome`, `quantidadeCreditos`, `ementa`, `Departamento_idDepartamento`) VALUES (9, 'Eletrônica Veicular', 4, '1. Introdução sistemas elétricos automotivos 2. Componentes automotivos básicos 3. Baterias automotivas 4. Sistema de carregamento 5. Sistemas de partida do motor', 2);
+INSERT INTO `mydb`.`Disciplina` (`idDisciplina`, `nome`, `quantidadeCreditos`, `ementa`, `Departamento_idDepartamento`) VALUES (10, 'Gerência de Redes e Sistemas', 2, 'Princípios, Organização, Processos, Atividades, Áreas e Métodos de Administração de Rede. Tecnologias de Suporte à Gerência de Rede', 2);
+INSERT INTO `mydb`.`Disciplina` (`idDisciplina`, `nome`, `quantidadeCreditos`, `ementa`, `Departamento_idDepartamento`) VALUES (11, 'Fundamentos de Sistemas', 4, 'Definições e aplicações.Metodologias de desenvolvimento de sistemas embarcados.Interfaceamento analógico e digital ', 2);
+INSERT INTO `mydb`.`Disciplina` (`idDisciplina`, `nome`, `quantidadeCreditos`, `ementa`, `Departamento_idDepartamento`) VALUES (12, 'Sistemas Hidroelétricos', 5, 'Energia Hidráulica: Conceitos BásicosCentrais HidroelétricasEstudos HidrológicosSistemas de Baixa e Alta PressãoTurbinas HidráulicasEstudos Sociais, Econômicos e Ambientais', 2);
+INSERT INTO `mydb`.`Disciplina` (`idDisciplina`, `nome`, `quantidadeCreditos`, `ementa`, `Departamento_idDepartamento`) VALUES (13, 'Processamento de Sinais', 4, 'Sinais e sistemas no domínio do tempoSinais e sistemas no domínio da frequência', 2);
 
 INSERT INTO MateriasObrigatoriasCurso (Disciplina_idDisciplina, Curso_idCurso)
 VALUES
@@ -171,14 +183,12 @@ VALUES
     ("Normal"),
     ("Verão");
 
-INSERT INTO Mencao (descricao)
-VALUES 
-    ("SS"),
-    ("MS"),
-    ("MM"),
-    ("MI"),
-    ("II"),
-    ("SR");
+INSERT INTO `mydb`.`Mencao` (`idMencao`, `descricao`) VALUES (1, 'SR');
+INSERT INTO `mydb`.`Mencao` (`idMencao`, `descricao`) VALUES (2, 'II');
+INSERT INTO `mydb`.`Mencao` (`idMencao`, `descricao`) VALUES (3, 'MI');
+INSERT INTO `mydb`.`Mencao` (`idMencao`, `descricao`) VALUES (4, 'MM');
+INSERT INTO `mydb`.`Mencao` (`idMencao`, `descricao`) VALUES (5, 'MS');
+INSERT INTO `mydb`.`Mencao` (`idMencao`, `descricao`) VALUES (6, 'SS');
 
 INSERT INTO Pessoa (matricula, dataIngresso, email, nome, CPF, identidade, passaporte, TipoPessoa_idTipoPessoa, Sexo_idSexo, Cargo_idCargo, idPessoa_Filiacao, Escolaridade_idEscolaridade, EstadoCivil_idEstadoCivil, nacionalidade, Cidade_idCidade_Naturalidade, Endereco_idEndereco)
 VALUES
@@ -212,10 +222,20 @@ VALUES
     ("2022-01-17", 8, 1, 2, 2),
     ("2022-06-06", 4, 1, 3, 2),
     -- Semestres do Curso de ID 1
-    (NULL, 8, 1, 1, 1, 3),
-    (NULL, 8, 2, 1, 1, 3);
+    (NULL, 8, 1, 1, 3),
+    (NULL, 8, 1, 1, 3);
     
 INSERT INTO Semestre_has_Disciplina
 VALUES 
-	(1, 1),
-    (2, 2);
+	(1, 1, 3),
+    (1, 3, 5),
+    (1, 4, 4),
+    (2, 1, 5),
+    (2, 4, 3),
+    (3, 2, 5),
+    (3, 3, 5),
+    (4, 1, NULL),
+    (4, 3, NULL),
+    (4, 4, NULL),
+    (5, 11, NULL),
+    (5, 7, NULL);
