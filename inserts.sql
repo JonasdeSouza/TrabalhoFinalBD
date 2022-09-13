@@ -204,10 +204,15 @@ VALUES
     (2, NULL, 4),
     (2, NULL, 5);
 
-INSERT INTO Semestre (data, totalCreditos, Mencao_idMencao, Disciplina_idDisciplina, TipoSemestre_idTipoSemestre, Status_idStatus, Fluxo_idFluxo)
+INSERT INTO Semestre (data, totalCreditos, TipoSemestre_idTipoSemestre, Status_idStatus, Fluxo_idFluxo)
 VALUES 
-    ("2022-01-17", 8, 2, 1, 1, 2, 1),
-    ("2022-01-17", 8, 3, 2, 1, 2, 1),
-    ("2022-06-06", 4, NULL, 4, 1, 3, 1),
-    (NULL, 8, NULL, 1, 1, 1, 3),
-    (NULL, 8, NULL, 2, 1, 1, 3);
+    ("2022-01-17", 8, 1, 2, 1),
+    ("2022-01-17", 8, 1, 2, 1),
+    ("2022-06-06", 4, 4, 1, 3, 1),
+    (NULL, 8, 1, 1, 1, 3),
+    (NULL, 8, 2, 1, 1, 3);
+    
+INSERT INTO Semestre_has_Disciplina
+VALUES 
+	(1, 1),
+    (2, 2);
