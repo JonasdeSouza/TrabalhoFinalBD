@@ -122,14 +122,6 @@ VALUES
     ("Divorciado(a)"),
     ("Viuvo(a)");
 
--- INSERT INTO Departamento (nome, sigla)
--- VALUES
-    -- ("Departamento de Ciência da Computação", "CIC"),
-    -- ("Departamento de Engenharia Elétrica", "ENE"),
-    -- ("Departamento de Matemática", "MAT"),
-    -- ("Departamento de Engenharia Civil", "ENC"),
-    -- ("Departamento de Física", "FIS");
-
 INSERT INTO `mydb`.`Departamento` (`idDepartamento`, `nome`, `sigla`) VALUES (1, 'Departamento de Ciência da Computação', 'CIC');
 INSERT INTO `mydb`.`Departamento` (`idDepartamento`, `nome`, `sigla`) VALUES (2, 'Faculdade do Gama', 'FGA');
 INSERT INTO `mydb`.`Departamento` (`idDepartamento`, `nome`, `sigla`) VALUES (3, 'Departamento de Matemática', 'MAT');
