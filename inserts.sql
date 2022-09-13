@@ -199,7 +199,7 @@ WHERE idPessoa = 4;
 INSERT INTO Fluxo (TipoFluxo_idTipoFluxo, Pessoa_idPessoa, Curso_idCurso)
 VALUES
     (1, 2, 1),
-    (2, 4, 2),
+    (1, 4, 2),
     (2, NULL, 1),
     (2, NULL, 4),
     (2, NULL, 5);
