@@ -217,7 +217,7 @@ VALUES
     (NULL, 8, 1, 1, 3),
     (NULL, 8, 1, 1, 3);
     
-INSERT INTO Semestre_has_Disciplina
+INSERT INTO Semestre_has_Disciplina (Semestre_idSemestre, Disciplina_idDisciplina, Mencao_idMencao)
 VALUES 
 	(1, 1, 3),
     (1, 3, 5),
