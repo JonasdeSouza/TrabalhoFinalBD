@@ -213,10 +213,16 @@ VALUES
     -- Semestres do Aluno de ID 4
     ("2022-01-17", 8, 1, 2, 2),
     ("2022-06-06", 4, 1, 3, 2),
-    -- Semestres do Curso de ID 1
+    -- Semestres do Curso de ID 1 (Software)
     (NULL, 8, 1, 1, 3),
-    (NULL, 8, 1, 1, 3);
-    
+    (NULL, 8, 1, 1, 3),
+    -- Semestres do Curso de ID 2 (Aeroespacial)
+    (NULL, 0, 1, 1, 4),
+    (NULL, 0, 1, 1, 4),
+    -- Semestre do Curso de ID 3 (Elétrica)
+    (NULL, 0, 1, 1, 5),
+    (NULL, 0, 1, 1, 5);    
+
 INSERT INTO Semestre_has_Disciplina (Semestre_idSemestre, Disciplina_idDisciplina, Mencao_idMencao)
 VALUES 
 	(1, 1, 3),
@@ -230,4 +236,9 @@ VALUES
     (4, 3, NULL),
     (4, 4, NULL),
     (5, 11, NULL),
-    (5, 7, NULL);
+    (5, 7, NULL),
+    (6, 1, NULL),
+    (6, 3, NULL),
+    (6, 2, NULL),
+    (7, 8, NULL),
+    (7, 7, NULL);
