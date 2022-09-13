@@ -182,13 +182,13 @@ INSERT INTO `mydb`.`Mencao` (`idMencao`, `descricao`) VALUES (4, 'MM');
 INSERT INTO `mydb`.`Mencao` (`idMencao`, `descricao`) VALUES (5, 'MS');
 INSERT INTO `mydb`.`Mencao` (`idMencao`, `descricao`) VALUES (6, 'SS');
 
-INSERT INTO Pessoa (matricula, dataIngresso, email, nome, CPF, identidade, passaporte, TipoPessoa_idTipoPessoa, Sexo_idSexo, Cargo_idCargo, idPessoa_Filiacao, Escolaridade_idEscolaridade, EstadoCivil_idEstadoCivil, nacionalidade, Cidade_idCidade_Naturalidade, Endereco_idEndereco)
+INSERT INTO Pessoa (matricula, dataIngresso, email, nome, CPF, identidade, passaporte, TipoPessoa_idTipoPessoa, Sexo_idSexo, Cargo_idCargo, idPessoa_Filiacao, Escolaridade_idEscolaridade, EstadoCivil_idEstadoCivil, nacionalidade, Cidade_idCidade_Naturalidade, Endereco_idEndereco, Departamento_idDepartamento)
 VALUES
-    (NULL, "2018-03-10", "mariasouza@gmail.com", "Maria Souza", "016.103.864-31", "0.321.182", NULL, 3, 3, NULL, NULL, 4, 2, "Brasil", 3, 3),
-    (180076271, "2018-03-10", "pedrosouza@gmail.com", "Pedro Souza", "046.235.012-56", "3.548.248", NULL, 1, 1, NULL, NULL, 4, 1, "Brasil", 2, 3),
-    (096023749, "1996-06-15", "victorhugo@ieee.com", "Victor Hugo", "619.174.690-39", "0.185.519", "CS265436", 2, 1, 1, NULL, 6, 3, "Brasil", 1, 4),
-    (170015462, "2017-02-08", "mariaeduarda@gmail.com", "Maria Eduarda", "967.177.420-20", "2.155.368", NULL, 1, 4, NULL, NULL, 4, 1, "Brasil", 1, 4),
-    (010817912, "2008-09-28", "joaogomes@gmail.com", "Joao Gomes", "804.854.740-69", "0.985.716", NULL, 2, 2, 5, NULL, 3, 4, "Brasil", 1, 1);
+    (NULL, "2018-03-10", "mariasouza@gmail.com", "Maria Souza", "016.103.864-31", "0.321.182", NULL, 3, 3, NULL, NULL, 4, 2, "Brasil", 3, 3, NULL),
+    (180076271, "2018-03-10", "pedrosouza@gmail.com", "Pedro Souza", "046.235.012-56", "3.548.248", NULL, 1, 1, NULL, NULL, 4, 1, "Brasil", 2, 3, NULL),
+    (096023749, "1996-06-15", "victorhugo@ieee.com", "Victor Hugo", NULL, NULL, "CS265436", 2, 1, 1, NULL, 6, 3, "China", 1, 4, 1),
+    (170015462, "2017-02-08", "mariaeduarda@gmail.com", "Maria Eduarda", "967.177.420-20", "2.155.368", NULL, 1, 4, NULL, NULL, 4, 1, "Brasil", 1, 4, NULL),
+    (010817912, "2008-09-28", "joaogomes@gmail.com", "Joao Gomes", "804.854.740-69", "0.985.716", NULL, 2, 2, 5, NULL, 3, 4, "Brasil", 1, 1, NULL);
 
 UPDATE Pessoa
 SET idPessoa_Filiacao = 1
