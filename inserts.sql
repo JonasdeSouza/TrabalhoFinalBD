@@ -206,9 +206,12 @@ VALUES
 
 INSERT INTO Semestre (data, totalCreditos, TipoSemestre_idTipoSemestre, Status_idStatus, Fluxo_idFluxo)
 VALUES 
+	-- Semestres do Aluno 1
     ("2022-01-17", 8, 1, 2, 1),
-    ("2022-01-17", 8, 1, 2, 1),
-    ("2022-06-06", 4, 4, 1, 3, 1),
+    ("2022-01-17", 8, 1, 2, 2),
+    -- Semestres do Aluno 2
+    ("2022-06-06", 4, 1, 3, 1),
+    -- Semestres do Curso 1
     (NULL, 8, 1, 1, 1, 3),
     (NULL, 8, 2, 1, 1, 3);
     
