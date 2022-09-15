@@ -188,7 +188,7 @@ VALUES
     (180076271, "2018-03-10", "pedrosouza@gmail.com", "Pedro Souza", "046.235.012-56", "3.548.248", NULL, 1, 1, NULL, NULL, 4, 1, "Brasil", 2, 3, NULL),
     (096023749, "1966-06-15", "victorhugo@ieee.com", "Victor Hugo", NULL, NULL, "CS265436", 2, 1, 1, NULL, 6, 3, "China", 1, 4, 1),
     (170015462, "2017-02-08", "mariaeduarda@gmail.com", "Maria Eduarda", "967.177.420-20", "2.155.368", NULL, 1, 4, NULL, NULL, 4, 1, "Brasil", 1, 4, NULL),
-    (010817912, "2008-09-28", "joaogomes@gmail.com", "Joao Gomes", "804.854.740-69", "0.985.716", NULL, 2, 2, 5, NULL, 3, 4, "Brasil", 1, 1, NULL),
+    (010817912, "2008-09-28", "joaogomes@gmail.com", "Joao Gomes", "804.854.740-69", "0.985.716", NULL, 2, 2, 5, NULL, 3, 4, "Brasil", 1, 1, 1),
 	(565243453, "1980-12-08", "lucas123@gmail.com", "Lucas Santos", "765.443.736-82", "2.938.560", NULL, 2, 1, 1, NULL, 6, 2, "Brasil", 2, 1, 2);
 
 UPDATE Pessoa
