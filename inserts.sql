@@ -186,9 +186,10 @@ INSERT INTO Pessoa (matricula, dataIngresso, email, nome, CPF, identidade, passa
 VALUES
     (NULL, "2018-03-10", "mariasouza@gmail.com", "Maria Souza", "016.103.864-31", "0.321.182", NULL, 3, 3, NULL, NULL, 4, 2, "Brasil", 3, 3, NULL),
     (180076271, "2018-03-10", "pedrosouza@gmail.com", "Pedro Souza", "046.235.012-56", "3.548.248", NULL, 1, 1, NULL, NULL, 4, 1, "Brasil", 2, 3, NULL),
-    (096023749, "1996-06-15", "victorhugo@ieee.com", "Victor Hugo", NULL, NULL, "CS265436", 2, 1, 1, NULL, 6, 3, "China", 1, 4, 1),
+    (096023749, "1966-06-15", "victorhugo@ieee.com", "Victor Hugo", NULL, NULL, "CS265436", 2, 1, 1, NULL, 6, 3, "China", 1, 4, 1),
     (170015462, "2017-02-08", "mariaeduarda@gmail.com", "Maria Eduarda", "967.177.420-20", "2.155.368", NULL, 1, 4, NULL, NULL, 4, 1, "Brasil", 1, 4, NULL),
-    (010817912, "2008-09-28", "joaogomes@gmail.com", "Joao Gomes", "804.854.740-69", "0.985.716", NULL, 2, 2, 5, NULL, 3, 4, "Brasil", 1, 1, NULL);
+    (010817912, "2008-09-28", "joaogomes@gmail.com", "Joao Gomes", "804.854.740-69", "0.985.716", NULL, 2, 2, 5, NULL, 3, 4, "Brasil", 1, 1, NULL),
+	(565243453, "1980-12-08", "lucas123@gmail.com", "Lucas Santos", "765.443.736-82", "2.938.560", NULL, 2, 1, 1, NULL, 6, 2, "Brasil", 2, 1, 2);
 
 UPDATE Pessoa
 SET idPessoa_Filiacao = 1
@@ -198,30 +199,38 @@ UPDATE Pessoa
 SET idPessoa_Filiacao = 3
 WHERE idPessoa = 4;
 
+UPDATE Pessoa
+SET idPessoa_Filiacao = 3
+WHERE idPessoa = 6;
+
 INSERT INTO Fluxo (TipoFluxo_idTipoFluxo, Pessoa_idPessoa, Curso_idCurso)
 VALUES
     (1, 2, 1),
     (1, 4, 2),
     (2, NULL, 1),
     (2, NULL, 4),
-    (2, NULL, 5);
+    (2, NULL, 5),
+    -- Professor de Engenharia de Software
+    (1, 6, 1);
 
-INSERT INTO Semestre (data, totalCreditos, TipoSemestre_idTipoSemestre, Status_idStatus, Fluxo_idFluxo)
+INSERT INTO Semestre (data, TipoSemestre_idTipoSemestre, Status_idStatus, Fluxo_idFluxo)
 VALUES 
 	-- Semestre do Aluno de ID 2
-    ("2022-01-17", 8, 1, 3, 1),
+    ("2022-06-06", 1, 3, 1),
     -- Semestres do Aluno de ID 4
-    ("2022-01-17", 8, 1, 2, 2),
-    ("2022-06-06", 4, 1, 3, 2),
+    ("2022-01-17", 1, 2, 2),
+    ("2022-06-06", 1, 3, 2),
     -- Semestres do Curso de ID 1 (Software)
-    (NULL, 8, 1, 1, 3),
-    (NULL, 8, 1, 1, 3),
+    (NULL, 1, 1, 3),
+    (NULL, 1, 1, 3),
     -- Semestres do Curso de ID 2 (Aeroespacial)
-    (NULL, 0, 1, 1, 4),
-    (NULL, 0, 1, 1, 4),
+    (NULL, 1, 1, 4),
+    (NULL, 1, 1, 4),
     -- Semestre do Curso de ID 3 (Elétrica)
-    (NULL, 0, 1, 1, 5),
-    (NULL, 0, 1, 1, 5);    
+    (NULL, 1, 1, 5),
+    (NULL, 1, 1, 5),
+    -- Semestre da Pessoa de ID 6 (Software)
+    ("2022-01-17", 1, 3, 6);
 
 INSERT INTO Semestre_has_Disciplina (Semestre_idSemestre, Disciplina_idDisciplina, Mencao_idMencao)
 VALUES 
@@ -241,4 +250,10 @@ VALUES
     (6, 3, NULL),
     (6, 2, NULL),
     (7, 8, NULL),
-    (7, 7, NULL);
+    (7, 7, NULL),
+    (8, 1, NULL),
+    (8, 3, NULL),
+    (8, 4, NULL),
+    (9, 13, NULL),
+    (9, 5, NULL),
+    (10, 4, NULL);
