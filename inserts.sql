@@ -213,7 +213,9 @@ VALUES
     (2, NULL, 4),
     (2, NULL, 5),
     -- Professor de Engenharia de Software
-    (1, 6, 1);
+    (1, 6, 1),
+    -- Victor Hugo de Engenharia Aeroespacial
+    (1, 3, 2);
 
 INSERT INTO Semestre (data, TipoSemestre_idTipoSemestre, Status_idStatus, Fluxo_idFluxo)
 VALUES 
@@ -231,8 +233,10 @@ VALUES
     -- Semestre do Curso de ID 3 (Elétrica)
     (NULL, 1, 1, 5),
     (NULL, 1, 1, 5),
-    -- Semestre da Pessoa de ID 6 (Software)
-    ("2022-01-17", 1, 3, 6);
+    -- Semestre da Pessoa de ID 6 (Lucas Santos: Software)
+    ("2022-01-17", 1, 3, 6),
+    -- Semestre da Pessoa de ID 3 (Victor Hugo: Aeroespacial)
+    ("2022-01-17", 1, 3, 3);
 
 INSERT INTO Semestre_has_Disciplina (Semestre_idSemestre, Disciplina_idDisciplina, Mencao_idMencao)
 VALUES 
@@ -258,4 +262,5 @@ VALUES
     (8, 4, NULL),
     (9, 13, NULL),
     (9, 5, NULL),
-    (10, 4, NULL);
+    (10, 4, NULL),
+    (11, 8, NULL);
