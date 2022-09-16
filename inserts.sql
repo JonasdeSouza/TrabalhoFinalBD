@@ -190,8 +190,8 @@ VALUES
     (170015462, "2017-02-08", "mariaeduarda@gmail.com", "Maria Eduarda", "967.177.420-20", "2.155.368", NULL, 1, 4, NULL, NULL, 4, 1, "Brasil", 1, 4, NULL),
     (010817912, "2008-09-28", "joaogomes@gmail.com", "Joao Gomes", "804.854.740-69", "0.985.716", NULL, 2, 2, 5, NULL, 3, 4, "Brasil", 1, 1, NULL),
 	(565243453, "1980-12-08", "lucas123@gmail.com", "Lucas Santos", "765.443.736-82", "2.938.560", NULL, 2, 1, 1, NULL, 6, 2, "Brasil", 2, 1, 2),
-    (096023749, "2005-03-30", "mariavania@ieee.com", "Maria Vania", "020.413.470-66", "4.574.123", NULL, 2, 3, 6, NULL, 6, 3, "Brasil", 1, 2, 1),
-    (096023749, "2014-08-11", "mateuspires@unb.br", "Mateus Pires","071.975.170-52", "1.103.972", NULL, 2, 1, 7, NULL, 6, 3, "Brasil", 1, 5, 1);
+    (096076549, "2005-03-30", "mariavania@ieee.com", "Maria Vania", "020.413.470-66", "4.574.123", NULL, 2, 3, 6, NULL, 6, 3, "Brasil", 1, 2, 1),
+    (098763749, "2014-08-11", "mateuspires@unb.br", "Mateus Pires","071.975.170-52", "1.103.972", NULL, 2, 1, 7, NULL, 6, 3, "Brasil", 1, 5, 1);
 
 UPDATE Pessoa
 SET idPessoa_Filiacao = 1
