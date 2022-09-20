@@ -50,14 +50,6 @@ VALUES
 	("Celular"),
     ("Residencial"),
     ("Comercial");
-
-INSERT INTO Telefone (numero, TipoTelefone_idTipoTelefone, Cidade_idCidade)
-VALUES
-	(937187468,1,3),
-	(982827434,3,1),
-	(906185282,2,5),
-	(935874879,3,2),
-	(946329639,2,3);
     
 INSERT INTO Sexo (descricao)
 VALUES
@@ -192,6 +184,14 @@ VALUES
 	(565243453, "1980-12-08", "lucas123@gmail.com", "Lucas Santos", "765.443.736-82", "2.938.560", NULL, 2, 1, 1, NULL, 6, 2, "Brasil", 2, 1, 2),
     (096076549, "2005-03-30", "mariavania@ieee.com", "Maria Vania", "020.413.470-66", "4.574.123", NULL, 2, 3, 6, NULL, 6, 3, "Brasil", 1, 2, 1),
     (098763749, "2014-08-11", "mateuspires@unb.br", "Mateus Pires","071.975.170-52", "1.103.972", NULL, 2, 1, 7, NULL, 6, 3, "Brasil", 1, 5, 1);
+
+INSERT INTO Telefone (numero, TipoTelefone_idTipoTelefone, Cidade_idCidade, Pessoa_idPessoa)
+VALUES
+	(937187468,1,3, 1),
+	(982827434,3,1, 2),
+	(906185282,2,5, 3),
+	(935874879,3,2, 4),
+	(946329639,2,3, 5);
 
 UPDATE Pessoa
 SET idPessoa_Filiacao = 1
